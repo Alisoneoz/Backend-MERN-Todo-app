@@ -1,5 +1,5 @@
 const express = require("express");
-const requireAuth = require("../middleware/requireAuth");
+const requireauth = require("../middleware/requireauth");
 
 const {
   listAllTodo,
@@ -12,7 +12,7 @@ const {
 const router = express.Router();
 
 // require auth for all Todo routes
-router.use(requireAuth);
+router.use(requireauth);
 
 router.get("/", listAllTodo);
 
